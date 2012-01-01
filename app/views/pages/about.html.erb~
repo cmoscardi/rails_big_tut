@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutorial App | <%= @title %></title>
+  </head>
+  <body>
+    <h1>About Page </h1>
+    <p>This is the about page.
+      It is very Exciting. 
+      I hear those Giggles. 
+    </p>
+  </body>
+</html>
