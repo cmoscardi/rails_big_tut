@@ -90,7 +90,7 @@ a.signup_button {
     background: #006400;
     font-size: 150%;
     font-weight: bold;
-    padding: 20px;
+    padding: 18px;
 }
 
 /**round corners for stuff**/
@@ -98,4 +98,19 @@ a.signup_button {
     -moz-border-raidus: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+}
+
+/**Footer stuff**/
+footer {
+    text-align: center;
+    margin-top: 18px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 0px
+}
+
+footer nav {
+    float: none;
 }
