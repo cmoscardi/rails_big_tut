@@ -115,3 +115,7 @@ footer {
 footer nav {
     float: none;
 }
+
+tr#user_info_head {
+    font-size: 24px
+}
