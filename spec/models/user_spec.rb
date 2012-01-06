@@ -85,5 +85,46 @@ describe User do
       User.new(hash).should_not be_valid
     end
   end
+
+  describe "pwd encryption" do
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+    
+    it "should have an encrypted password attribute" do
+      @user.should respond_to(:encrypted_password)
+    end
+
+    it "should not be blank" do
+      @user.encrypted_password.should_not be_blank
+    end
+    
+    describe "has_password? method" do
+      it "should true if passwords match" do
+        @user.has_password?(@attr[:password]).should be_true
+      end
+      
+      it "should false if passwords don't match" do
+        @user.has_password?("invalidd").should be_false
+      end
+    end
+    
+    describe "authenticate method" do
+      it "should return nil on mismatch" do
+        wrong_pw = User.authenticate(@attr[:email], "notcorrect")
+        wrong_pw.should be_nil
+      end
+      
+      it "should return nil for an email-less user" do
+        wrong_email = User.authenticate("flutes@flutes.flutes", @attr[:password])
+        wrong_email.should be_nil
+      end
+      
+      it "should return a value for a correct user that isnt" do
+        correct = User.authenticate(@attr[:email],@attr[:password])
+        correct.should == @user
+      end
+    end
+  end
 end
 

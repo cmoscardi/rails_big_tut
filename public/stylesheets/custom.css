@@ -116,6 +116,33 @@ footer nav {
     float: none;
 }
 
-tr#user_info_head {
-    font-size: 24px
+table.profile {
+    width: 100%;
+    margin-bottom: -12px;
+}
+
+td.main {
+    width: 70%;
+    position:relative;
+    margin-bottom: 10px;
+
+}
+
+td.sidebar {
+    width: 30%;
+    padding: .5em;
+    vertical-align: top;
+    background: #ffc;
+    text-align: right;
+}
+
+.profile img.avatar {
+    border: 1px solid #999;
+    vertical-align: text-bottom;
+}
+
+h1.cat {
+    position: relative;
+    left:-14px;
+    top:-14px;
 }

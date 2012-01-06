@@ -1,10 +1,18 @@
-<table>
-  <tr id="user_info_head">
-    <td>User</td>
-    <td>Email</td>
-  </tr>
+
+
+<table class = "profile" summary = "Profile Information">
   <tr>
-    <td><%= @user.name %></td>
-    <td><%= @user.email %></td>
+    <td class = "main">
+      <h1 class="cat">
+	<%= user_avatar %>
+	<%= @user.name %>
+      </h1>
+    </td>
+    
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @user.name %> <br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+    </td>
   </tr>
 </table>
+ 	
