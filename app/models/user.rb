@@ -12,7 +12,8 @@ require 'digest'
 class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible(:name, :email, :password, :password_confirmation)
- 
+  has_attached_file :avatar, :styles => {:thumb => "75x75>"}
+  
   validates(:name, {:presence => true})
 
   validates(:email, {:presence => true})
