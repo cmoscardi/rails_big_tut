@@ -1,0 +1,14 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were 
+      <%= pluralize(@user.errors.count, "error") %> 
+      in the signup process. </h2>
+    <p>In particular :</p>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+      
