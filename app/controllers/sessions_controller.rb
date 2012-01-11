@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     else 
       flash.now[:error]="There was an error while signing in!"
       @title = "Sign in"
-      render 'new'
+      render :new
     end
   end
 
