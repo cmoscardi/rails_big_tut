@@ -53,7 +53,7 @@ describe UsersController do
       
       it "should redirect to the correct page" do
         post :create, :user => @attr
-        response.should redirect_to(user_path(assigns(:user)))
+        response.should redirect_to(signin_path)
       end
       
       it "should have a welecome message" do
